@@ -1,0 +1,102 @@
+@media (max-width: 600px) {
+    .main, .quiz, .result, .loading {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .introduction {
+        width: 100%;
+    }
+
+    .introduction .banner, 
+    .result .banner {
+        width: 95%;
+    }
+
+    .introduction .button-intro {
+        width: 90%;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .introduction .button-intro:hover {
+        width: 93%;
+        height: 63px;
+        font-size: 18px;
+    }
+
+    .quiz .logo-panetone {
+        width: 130px;
+    }
+
+    .quest {
+        background-color: #f04747;
+        color: #fff;
+        border: #000 solid;
+        padding: 0px;
+        margin-top: 5px;
+        text-align: center;
+        font-size:17px;
+        font-weight: 700;
+    }
+
+    .instruction {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        -webkit-text-stroke-width: 1.6px;
+        -webkit-text-stroke-color: #000;
+    }
+
+    .quiz.homem-ou-mulher .images {
+        background: linear-gradient(125deg, #ffffff, #f43131, #743d3d);
+        border: #fff solid 3px;
+        box-shadow: 10px 10px 90px #430606;
+    }
+
+    .quiz.homem-ou-mulher .images .homem {
+        width: 150px;
+    }
+    .quiz.homem-ou-mulher .images .mulher {
+        width: 150px;
+    }
+
+    .progress-container {
+        position: absolute;
+        bottom: 60px;
+        width: 350px;
+        height: 12px;
+        border-radius: 5px;
+        background-color: #ccc;
+    }
+
+    .loading {
+        width: 100%;
+    }
+
+    .foot-section {
+        width: 100%;
+    }
+
+    .checkout-button {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .foot-section .selos {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .garantia {
+        width: 150px;
+    }
+
+    .barra-segura,
+    .site-seguro {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

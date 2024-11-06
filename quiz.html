@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./SRC/Images/favicon_io" type="image/x-icon">
     <link rel="stylesheet" href="./SRC/CSS/style.css">
     <link rel="stylesheet" href="./SRC/CSS/reset.css">
+    <link rel="stylesheet" href="./SRC/CSS/responsive.css">
+
     <title>ConectQuiz</title>
 </head>
 
 <body>
     <main class="main">
 
-        <section class="introduction ">
+        <section class="introduction mostrar">
             <img class="banner" src="./SRC/Images/Banner-panetone.png" alt="Um banner sobre o produto">
             <button class="button-intro">Continuar</button>
             <footer class="footer-copy">
@@ -20,7 +23,13 @@
             </footer>
         </section>
 
-        <section class="quiz homem-ou-mulher ">
+        <div class="progress-container ocultar">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <section class="quiz homem-ou-mulher ocultar">
+
+
             <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
             <p class="quest">Olá, Vamos começar 😃</p>
             <p class="instruction">Escolha uma opção abaixo.</p>
@@ -34,7 +43,7 @@
             </div>
         </section>
 
-        <section class="quiz quiz1 ">
+        <section class="quiz quiz1 ocultar">
             <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
             <p class="quest">Você já tem experiência na cozinha ?</p>
             <p class="instruction">Escolha uma opção abaixo.</p>
@@ -57,7 +66,7 @@
             </div>
         </section>
 
-        <section class="quiz quiz2 ">
+        <section class="quiz quiz2 ocultar">
             <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
             <p class="quest">Você já tentou vender algum produto caseiro antes ?</p>
             <p class="instruction">Escolha uma opção abaixo.
@@ -79,7 +88,7 @@
                 </ul>
             </div>
         </section>
-        <section class="quiz quiz3 ">
+        <section class="quiz quiz3 ocultar">
             <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
             <p class="quest">Quanto tempo você teria disponível por semana para se dedicar a esse projeto ?</p>
             <p class="instruction">Escolha uma opção abaixo.
@@ -101,7 +110,7 @@
                 </ul>
             </div>
         </section>
-        <section class="quiz quiz4 ">
+        <section class="quiz quiz4 ocultar">
             <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
             <p class="quest">Qual seria o seu investimento inicial para começar ?</p>
             <p class="instruction">Escolha uma opção abaixo.
@@ -123,7 +132,7 @@
                 </ul>
             </div>
         </section>
-        <section class="quiz quiz5 ">
+        <section class="quiz quiz5 ocultar">
             <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
             <p class="quest">Qual tipo de ajuda você considera mais importante para começar a vender panetones gourmet ?
             </p>
@@ -147,7 +156,38 @@
             </div>
         </section>
 
+        <section class="loading ocultar">
+            <img src="./SRC/Images/loading.gif" alt="Carregando..." class="loading-image">
+            <p class="loading-text">Processando seu resultado...</p>
+        </section>
+        
+        <section class="result ocultar">
+            <img class="logo-panetone" src="./SRC/Images/logo-panetone.png" alt="Logo panetone gourmet lucrativo">
+
+            <p class="result-text">O produto que proporciona uma ótima renda extra para minha mãe e para mim há mais de três anos também pode ajudar você a ter excelentes vendas neste fim de ano. Criamos um PDF que reúne o conhecimento culinário da minha mãe, com suas incríveis receitas, e minha ampla experiência em marketing e vendas. Tudo o que você precisa para vender muito neste fim de ano está nesse material!</p>
+
+            <img class="banner" src="./SRC/Images/Banner-panetone.png" alt="Um banner sobre o produto">
+
+            <section class="foot-section ">
+            <footer class="foot-result">
+                <button class="btn checkout-button">Prosseguir</button>
+
+                <div class="garantia-box">
+                <img class="garantia" src="./SRC/Images/footer-result/Garantia.png" alt="">
+                    <p>Produto com selo de garantia de sete dias.</p>
+                </div>
+
+               <div class="selos">
+                <img class="barra-segura" src="./SRC/Images/footer-result/barra-segura.png" alt="">
+                <img class="site-seguro" src="./SRC/Images/footer-result/site-seguro.png" alt="">
+                </div>
+            </footer>
+            </section>
+    </section>
+
     </main>
+
+    <script src="./SRC/JS/index.js"></script>
 </body>
 
 </html>

@@ -2,28 +2,36 @@
 
     .main, .quiz, .result, .loading {
         width: 100%;
+        height: 100%;
     }
 
     .introduction {
         width: 100%;
         height: 100%;
+        justify-content: center;
     }
 
     .introduction .banner, 
     .result .banner {
-        width: 90%;
+        width: 70%;
     }
 
     .introduction .button-intro {
-        width: 90%;
-        height: 60px;
+        width: 300px;
         font-size: 18px;
+        margin-top: 50px;
     }
 
     .introduction .button-intro:hover {
-        width: 93%;
-        height: 63px;
+        width: 300px;
+        height: 73px;
         font-size: 18px;
+    }
+
+    .foot-section-intro .footer-copy {
+        margin-top: 80px;
+        height: 100%;
+        padding: 35px;
     }
 
     .quiz.homem-ou-mulher .images .homem {
@@ -45,6 +53,18 @@
         height: 65px;
     }
 
+    .quiz {
+        background: url(../Images/Background-quiz.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    
     .quiz .logo-panetone {
         width: 130px;
     }
@@ -107,9 +127,8 @@
     }
 
     .loading {
-        width: 100%;
+        height: 100vh;
     }
-
     .result {
         padding: 0;
         width: 100%;

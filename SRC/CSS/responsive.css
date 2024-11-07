@@ -1,7 +1,7 @@
 @media (max-width: 600px) {
+
     .main, .quiz, .result, .loading {
         width: 100%;
-        padding: 10px;
     }
 
     .introduction {
@@ -10,7 +10,7 @@
 
     .introduction .banner, 
     .result .banner {
-        width: 95%;
+        width: 90%;
     }
 
     .introduction .button-intro {
@@ -25,37 +25,6 @@
         font-size: 18px;
     }
 
-    .quiz .logo-panetone {
-        width: 130px;
-    }
-
-    .quest {
-        background-color: #f04747;
-        color: #fff;
-        border: #000 solid;
-        padding: 0px;
-        margin-top: 5px;
-        text-align: center;
-        font-size:17px;
-        font-weight: 700;
-    }
-
-    .instruction {
-        font-size: 20px;
-        font-weight: 800;
-        color: #fff;
-        margin-top: 10px;
-        margin-bottom: 15px;
-        -webkit-text-stroke-width: 1.6px;
-        -webkit-text-stroke-color: #000;
-    }
-
-    .quiz.homem-ou-mulher .images {
-        background: linear-gradient(125deg, #ffffff, #f43131, #743d3d);
-        border: #fff solid 3px;
-        box-shadow: 10px 10px 90px #430606;
-    }
-
     .quiz.homem-ou-mulher .images .homem {
         width: 150px;
     }
@@ -63,17 +32,97 @@
         width: 150px;
     }
 
-    .progress-container {
-        position: absolute;
-        bottom: 60px;
+    .quiz.homem-ou-mulher .buttons .buttonPg1 {
+        margin: 0 28px 0 28px;
+        font-size: 16px;
+        width: 100px;
+        height: 63px;
+    }
+    
+    .quiz.homem-ou-mulher .buttons .buttonPg1:hover {
+        width: 103px;
+        height: 65px;
+    }
+
+    .quiz .logo-panetone {
+        width: 130px;
+    }
+
+    .quest {
+        margin-top: 5px;
+        font-size:17px;
+    }
+
+    .quiz.quiz1 .quest {
+        width: 230px;
+    }
+    
+    .quiz.quiz2 .quest {
+        width: 300px;
+    }
+    
+    .quiz.quiz3 .quest {
+        width: 320px;
+    }
+    
+    .quiz.quiz4 .quest {
+        width: 320px;
+    }
+    
+    .quiz.quiz5 .quest {
         width: 350px;
-        height: 12px;
-        border-radius: 5px;
-        background-color: #ccc;
+    }
+    
+
+    .instruction {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .buttons ul li .btn {
+        padding: 13px 30px;
+        margin-top: 15px;
+        width: 350px;
+    }
+    
+    .buttons ul li .btn:hover {
+        width: 353px;
+    }
+    
+    .buttons ul li .btn span {
+        font-size: 35px;
+    }
+    
+    .buttons ul li .btn p {
+        font-weight: 600;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .progress-container {
+        bottom: 45px;
+        width: 350px;
     }
 
     .loading {
         width: 100%;
+    }
+
+    .result {
+        padding: 0;
+        width: 100%;
+    }
+
+    .result .logo-panetone {
+        width: 250px;
+        margin-top: 0px;
+    }
+    
+    .result-text {
+        font-size: 17px;
+        margin: 10px 30px 90px 30px;
+        padding: 25px;
     }
 
     .foot-section {
@@ -81,22 +130,179 @@
     }
 
     .checkout-button {
-        width: 90%;
+        width: 70%;
         margin: 20px;
     }
 
-    .foot-section .selos {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .garantia {
+    .garantia-box .garantia {
         width: 150px;
     }
+  
+    .foot-section .foot-result .garantia-box p {
+        font-size: 15px;
+        padding: 25px;
+        margin-left: 30px;
+        width: 180px;
+    }
 
-    .barra-segura,
+    .foot-section .foot-result .selos {
+        display: flex;
+        flex-direction: row;
+        width: 400px;
+    }
+
+    .barra-segura {
+        width: 250px;
+        margin-right: 15px;
+        margin: 5px 10px;
+    }
+    
     .site-seguro {
+        width: 100px;
+        margin-left: 15px;
+        margin: 10px 10px;
+    }
+}
+
+@media (max-width: 376px) {
+
+    .result-text {
+        font-size: 16px;
+        margin: 10px 30px 90px 30px;
+        padding: 25px;
+
+    }
+  
+    .foot-section .foot-result .garantia-box p {
+        font-size: 14px;
+        width: 160px;
+    }
+
+    .foot-section .foot-result .selos {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        margin-bottom: 0;
+    }
+
+    .barra-segura {
+        width: 230px;
+    }
+    
+    .site-seguro {
+        width: 100px;
+    }
+}
+
+@media (max-width: 321px) {
+
+    .quiz.homem-ou-mulher .images .homem {
+        width: 140px;
+    }
+    .quiz.homem-ou-mulher .images .mulher {
+        width: 140px;
+    }
+
+    .quiz.homem-ou-mulher .buttons .buttonPg1 {
+        margin: 0 30px 0 30px;
+        padding: 0 auto;
+        font-size: 15px;
+        width: 100px;
+    }
+
+    .quiz.quiz1 .quest {
+        width: 230px;
+    }
+    
+    .quiz.quiz2 .quest {
+        width: 300px;
+    }
+    
+    .quiz.quiz3 .quest {
+        width: 300px;
+    }
+    
+    .quiz.quiz4 .quest {
+        width: 300px;
+    }
+    
+    .quiz.quiz5 .quest {
+        width: 300px;
+    }
+
+    .instruction {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .buttons ul li .btn {
+        padding: 13px 15px;
+        width: 300px;
+    }
+    
+    .buttons ul li .btn:hover {
+        width: 303px;
+    }
+    
+    .buttons ul li .btn p {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .progress-container {
+        bottom: 45px;
+        width: 300px;
+    }
+
+    .loading {
         width: 100%;
-        margin: 5px 0;
+    }
+
+    .loading-text {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .result .logo-panetone {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    
+    .result-text {
+        font-size: 14px;
+        margin: 10px 30px 90px 30px;
+        padding: 25px;
+
+    }
+
+    .garantia-box .garantia {
+        width: 130px;
+    }
+  
+    .foot-section .foot-result .garantia-box p {
+        font-size: 13px;
+        padding: 20px;
+        margin-left: 15px;
+        width: 140px;
+    }
+
+    .foot-section .foot-result .selos {
+        display: flex;
+        flex-direction: row;
+        width: 280px;
+        margin-bottom: 0;
+    }
+
+    .barra-segura {
+        width: 190px;
+        margin-right: 15px;
+        margin: 5px 10px;
+    }
+    
+    .site-seguro {
+        width: 80px;
+        margin-left: 15px;
+        margin: 10px 10px;
     }
 }

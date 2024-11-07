@@ -4,40 +4,47 @@ const introButton = document.querySelector('.button-intro');
 const loadingSection = document.querySelector('.loading');
 const resultSection = document.querySelector('.result');
 const checkoutButton = document.querySelector('.checkout-button');
+const progressBar = document.querySelector('.progress-bar');
 const progressBarContainer = document.querySelector('.progress-container');
 
 const checkoutUrl = "https://google.com";
+let currentSection = 0;
+
+const toggleVisibility = (element, show) => element.classList.toggle('ocultar', !show);
+const updateProgressBar = (index) => {
+    const progress = ((index + 1) / sections.length) * 100;
+    progressBar.style.width = `${progress}%`;
+};
 
 introButton.addEventListener('click', () => {
-    introSection.classList.add('ocultar');
-    sections[0].classList.remove('ocultar');
-    updateProgressBar(0); // Inicia a barra no início
+    toggleVisibility(introSection, false);
+    toggleVisibility(progressBarContainer, true);
+    toggleVisibility(sections[0], true);
+    updateProgressBar(0);
+});
+
+sections.forEach((section, index) => {
+    section.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => goToNextSection(index));
+    });
 });
 
 function goToNextSection(currentIndex) {
-    sections[currentIndex].classList.add('ocultar');
+    toggleVisibility(sections[currentIndex], false);
     if (currentIndex + 1 < sections.length) {
-        sections[currentIndex + 1].classList.remove('ocultar');
-        updateProgressBar(currentIndex + 1); // Atualiza a barra conforme o índice da seção
+        toggleVisibility(sections[currentIndex + 1], true);
+        updateProgressBar(currentIndex + 1);
     } else {
+        toggleVisibility(progressBarContainer, false);
         showLoadingScreen();
     }
 }
 
-sections.forEach((section, index) => {
-    const buttons = section.querySelectorAll('button');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            goToNextSection(index);
-        });
-    });
-});
-
 function showLoadingScreen() {
-    loadingSection.classList.remove('ocultar');
+    toggleVisibility(loadingSection, true);
     setTimeout(() => {
-        loadingSection.classList.add('ocultar');
-        resultSection.classList.remove('ocultar');
+        toggleVisibility(loadingSection, false);
+        toggleVisibility(resultSection, true);
     }, 3000);
 }
 
@@ -45,62 +52,4 @@ checkoutButton.addEventListener('click', () => {
     window.location.href = checkoutUrl;
 });
 
-let lastProgress = 0;
-
-function updateProgressBar(currentSectionIndex) {
-    const progressBar = document.querySelector('.progress-bar');
-    const totalSections = sections.length;
-    const progress = ((currentSectionIndex + 1) / totalSections) * 100;
-
-    progressBar.style.width = '0%'; // Inicia a animação do zero
-    setTimeout(() => {
-        progressBar.style.width = `${progress}%`;
-    }, 100); 
-    lastProgress = progress;
-}
-
-let currentSection = 0;
-
-document.querySelectorAll('.buttonPg1, .buttonPg2, .buttonPg3, .buttonPg4, .buttonPg5').forEach(button => {
-    button.addEventListener('click', () => {
-        currentSection++;
-        updateProgressBar(currentSection);
-    });
-});
-
-function toggleProgressBar(show) {
-    if (show) {
-        progressBarContainer.classList.remove('ocultar');
-    } else {
-        progressBarContainer.classList.add('ocultar');
-    }
-}
-
-introButton.addEventListener('click', () => {
-    introSection.classList.add('ocultar');
-    toggleProgressBar(true); 
-    sections[0].classList.remove('ocultar');
-    updateProgressBar(0);
-});
-
-function goToNextSection(currentIndex) {
-    sections[currentIndex].classList.add('ocultar');
-    if (currentIndex + 1 < sections.length) {
-        sections[currentIndex + 1].classList.remove('ocultar');
-        updateProgressBar(currentIndex + 1);
-    } else {
-        toggleProgressBar(false); 
-        showLoadingScreen();
-    }
-}
-
-function showLoadingScreen() {
-    loadingSection.classList.remove('ocultar');
-    toggleProgressBar(false);
-    setTimeout(() => {
-        loadingSection.classList.add('ocultar');
-        resultSection.classList.remove('ocultar');
-    }, 3000);
-}
-
-toggleProgressBar(false);
+toggleVisibility(progressBarContainer, false);

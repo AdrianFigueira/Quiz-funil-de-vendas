@@ -7,7 +7,7 @@ const checkoutButton = document.querySelector('.checkout-button');
 const progressBar = document.querySelector('.progress-bar');
 const progressBarContainer = document.querySelector('.progress-container');
 
-const checkoutUrl = "https://facebook.com";
+const checkoutUrl = "https://pay.cakto.com.br/8hcWg3E";
 let currentSection = 0;
 
 const toggleVisibility = (element, show) => element.classList.toggle('ocultar', !show);
